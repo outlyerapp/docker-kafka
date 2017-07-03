@@ -26,3 +26,6 @@ ADD supervisor/kafka.conf supervisor/zookeeper.conf /etc/supervisor/conf.d/
 EXPOSE 2181 9092
 
 CMD ["supervisord", "-n"]
+
+# Default directory for shell
+WORKDIR $KAFKA_HOME
