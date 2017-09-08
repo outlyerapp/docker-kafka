@@ -6,5 +6,5 @@ kafka:
   script:
     - docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} docker.dataloop.io
     - docker build -t docker.dataloop.io/outlyerapp/docker-kafka:${CI_COMMIT_REF_NAME} kafka/
-    - docker push docker.dataloop.io/outlyerapp/public_api/nginx:${CI_COMMIT_REF_NAME}
+    - docker push docker.dataloop.io/outlyerapp/docker-kafka:${CI_COMMIT_REF_NAME}
 
