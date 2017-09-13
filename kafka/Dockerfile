@@ -10,7 +10,7 @@ ENV PATH="${KAFKA_HOME}/bin:${PATH}"
 
 # Install Kafka, Zookeeper and other needed things
 RUN apt-get update && \
-    apt-get install -y zookeeper wget supervisor dnsutils && \
+    apt-get install -y zookeeper wget supervisor dnsutils netcat && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean && \
     wget -q http://apache.mirrors.spacedump.net/kafka/"$KAFKA_VERSION"/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz -O /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz && \
